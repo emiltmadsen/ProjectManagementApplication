@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+    <head th:replace="fragments/head"></head>
+<body>
+
+<nav th:replace="fragments/navbar"></nav>
+
+<div class="container">
+    <h3>Main Dashboard</h3>
+    <a th:text="${versionNumber}"></a>
+        <hr>
+        <h4> Current Projects </h4>
+        <div class="row">
+            <div class="col-md-6">
+            <table class="table table-bordered table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th> Project Name </th>
+                        <th> Project Stage </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="aProject : ${projectsList}">
+                        <td th:text="${aProject.name}"></td>
+                        <td th:text="${aProject.stage}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="col-md-4">
+            <canvas id="myPieChart" height="50" width="50"></canvas>
+
+            <script>
+                var chartData = "[[${projectStatusCnt}]]"
+            </script>
+        </div>
+
+        </div>
+</div>
+
+<div class="container">
+    <h4> Current Employees </h4>
+    <div class="row">
+    <div class="col-md-6">
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+            <tr>
+                <th> First name </th>
+                <th> Last name </th>
+                <th> Project Count </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="anEmployeeProjectCnt : ${employeesListProjectsCnt}">
+                <td th:text="${anEmployeeProjectCnt.firstName}" ></td>
+                <td th:text="${anEmployeeProjectCnt.lastName}" ></td>
+                <td th:text="${anEmployeeProjectCnt.projectCount}" ></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+</div>
+
+<script type="text/javascript" th:src="@{js/myChart.js}"></script>
+
+</body>
+</html>
