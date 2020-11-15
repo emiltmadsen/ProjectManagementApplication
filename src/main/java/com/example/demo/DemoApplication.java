@@ -1,16 +1,10 @@
 package com.example.demo;
 
-import com.example.demo.entities.Employee;
-import com.example.demo.entities.Project;
-import com.example.demo.repository.EmployeeRepository;
-import com.example.demo.repository.ProjectRepository;
+import com.example.demo.repositories.EmployeeRepository;
+import com.example.demo.repositories.ProjectRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-
-import java.util.Arrays;
 
 @SpringBootApplication
 public class DemoApplication {

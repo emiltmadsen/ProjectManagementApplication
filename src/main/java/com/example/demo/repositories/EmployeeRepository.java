@@ -1,4 +1,4 @@
-package com.example.demo.repository;
+package com.example.demo.repositories;
 
 import com.example.demo.dto.EmployeeProject;
 import com.example.demo.entities.Employee;
