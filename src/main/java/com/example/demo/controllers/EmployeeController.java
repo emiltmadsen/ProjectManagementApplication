@@ -43,4 +43,12 @@ public class EmployeeController {
         return "redirect:/employees/new";
     }
 
+    /* TODO: Verify addition of setter for EmployeeRepository in EmployeeController.
+    *   Necessary for testing (other option; get rid of Autowired and create parameterized
+    *   constructor.)*/
+    /** Setter for EmployeeRepository, added by Kian to allow test mockup */
+    public void setEmpRepo(EmployeeRepository employeeRepository) {
+        empRepo = employeeRepository;
+    }
+
 }

@@ -51,4 +51,14 @@ public class ProjectController {
         return "redirect:/projects";
     }
 
+
+    // TODO: Verify addition of setters for project and employee repository
+    //  (needed for testing, to use mocked repos)
+    public void setProjectRepository(ProjectRepository projectRepository) {
+        proRepo = projectRepository;
+    }
+
+    public void setEmployeeRepository(EmployeeRepository employeeRepository) {
+        empRepo = employeeRepository;
+    }
 }

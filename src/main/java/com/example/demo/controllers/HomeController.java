@@ -60,4 +60,11 @@ public class HomeController {
         return "home";
     }
 
+    /* TODO: Verify design change: added setters to repository fields in controllers.
+    *   As mentioned else-where, the option for dependence inject is needed for testing.
+    * Another option, negating the need for setters is a parameterized constructor*/
+
+    public void setProRepo(ProjectRepository proRepo) {        this.proRepo = proRepo;    }
+
+    public void setEmpRepo(EmployeeRepository empRepo) {        this.empRepo = empRepo;    }
 }
