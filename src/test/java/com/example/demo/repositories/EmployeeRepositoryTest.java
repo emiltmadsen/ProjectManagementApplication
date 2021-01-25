@@ -28,7 +28,7 @@ class EmployeeRepositoryTest {
     @Test
     void findAll() {
         // because the test data contains 9 employees, 9 are expected to be returned on findAll call
-        assertEquals(9, employeeRepository.findAll().size());
+        assertEquals(0, employeeRepository.findAll().size());
     }
 
     @Test
@@ -41,4 +41,10 @@ class EmployeeRepositoryTest {
         // But then there is the 'order by 3 DESC', which I can't quite make out what means
         // ... and doesn't seem to work.
     }
+
+    @Test
+    void trueIsFalse() {
+        assertEquals(1, 2);
+    }
+
 }
